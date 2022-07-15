@@ -1,17 +1,41 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>game</title>
-    </head>
-    <body>
-        <p>Let's see who win the toss User 1 or User 2</p>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Head Tail Game</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <p>Let's see who win the toss User 1 or User 2</p>
         <button id="user-toss" onClick="userToss()">Toss</button>
-        <div>
-            <p id="selected-user"></p>
-            
+        
+        <p id="selected-user"></p>
+        <div id="options-box">
+            <input type="radio" id="head" name="options" value="Head" onClick="optionClick('head')">
+            <label for="head">Head</label>
+            <br>
+            <input type="radio" id="tail" name="options" value="Tail" onClick="optionClick('tail')">
+            <label for="tail">Tail</label>
         </div>
 
+        <div id="users">
+            <div id="user1">
+                <h3>User 1</h3>
+                <p>You need <span id="hh"></span> to get points.</p>
+                <p>points: <span id="user1-points"></span>/5</p>
+                <button onClick="trys('u1')">Try</button>
+            </div>
+        
+            <div id="user2">
+                <h3>User 2</h3>
+                <p>You need <span id="gg"></span> to get points.</p>
+                <p>points: <span id="user2-points"></span>/5</p>
+                <button onClick="trys('u2')">Try</button>
+            </div>
+        </div>
 
         <script src="./app.js"></script>
-    </body>
+</body>
 </html>
