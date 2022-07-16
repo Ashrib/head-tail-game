@@ -43,7 +43,32 @@ function optionClick(a) {
         document.getElementById("gg").innerText = selectedOption;
     };
 };
-var user1_point = 0;
-var user2_point = 0;
-document.getElementById("user1-points").innerText = user1_point;
-document.getElementById("user2-points").innerText = user2_point;
+function tries(b) {
+    var us1 = document.getElementById("hh").innerText;
+    var us2 = document.getElementById("gg").innerText;
+    var rndm = Math.round(Math.random()*1);
+    var get;
+    if(rndm === 0){
+        get = "Head";
+    }
+    else{
+        get = "Tail";
+    };
+    if(b === "u1") {
+        if(us1 ===get){
+            document.getElementById("user1-points").innerText = "win";
+        }
+        else{
+            document.getElementById("user1-points").innerText = "lose";
+        }
+    }
+    else{
+        if(us2 ===get){
+            document.getElementById("user2-points").innerText = "win";
+        }
+        else{
+            document.getElementById("user2-points").innerText = "lose";
+        }
+    }
+};
+
